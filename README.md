@@ -3,9 +3,13 @@
 ## 역할
 + 핸들링은 docker 가, 최적화는 kubernetes
 + Container Ochestration : 스케줄링, 클러스터링, 서비스 디스커버리, 로깅/모니터링 중앙 관리
++ 최소 10대 이상 사용할 때 효과적임
 
 ## 오케스트레이션 중 kubernetes의 선점 이유 
 + 사용하기 편한편(json 형태)
++ 배포 편함
++ 자동화 관리 성능 및 연속성 좋음(health check 자동화 가능)
++ MSA(micro service archetecher)에 최적화
 + 커뮤니티 파워
 + 다른 서비스) docker swarm
 
@@ -28,3 +32,29 @@
 + big data platform 구성 용도
 + container 위에 kafka, spark 등을 올림
 + container image 를 구성한 후에, kubernetes registry 에 등록하여 배포
+
+## cluster
++ master & worker 로 구성
++ 3 ~ 50개 노드 커버함
++ 기본적으로 상호간 backup을 해주는 효과
+
+## 고성능 단일 vs 저성능 멀티 
++ 정부 : 고성능, 저탄소 규제 관련, 컨테이너간 간섭 문제 발생 가능
++ 기업 : 저성능, 전체 퍼포먼스는 올라감
+
+## 향후 사용할 것들
+kubespray
+Rancher (Managed Kubernetes Platform)
+CNI (Container Network Interface) : 칼리코, 플라넬
+
+
+## 기타
+### cloud vs on-promise
++ 초기의 경우 cloud 비용이 적음
++ 장기적으로 볼 경우 on-promise 비용 적음
++ cloud 의 경우가 비용이 더 발생, Out-bound 비용이 생각보다 큼
++ on-promise 구성시, 저사양으로 많이 넣어서 구성
+
+
+
+
